@@ -20,7 +20,8 @@
     </div>
 </div>
 
-<section class="content">
+<section class="content"
+    style="background-image: url('{{ asset('/login/images/IMG_2079.jpg')}}');background-size: 2000px 1000px;background-repeat: no-repeat;">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -137,7 +138,7 @@
                                 </div>
 
 
-                                <div class="card shadow mb-4">
+                                <div class="card shadow mb-4" style="opacity: 0;">
                                     <div class="card-header py-3">
                                         <h6 class="m-0 font-weight-bold text-primary"></h6>
                                     </div>
