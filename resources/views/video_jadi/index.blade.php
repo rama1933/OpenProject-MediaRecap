@@ -135,7 +135,7 @@
                             <input type="hidden" name="id" id="id">
                             <div class="modal-content">
                                 <div class="modal-header" style="background-color: cornflowerblue">
-                                    <h4 class="modal-title" style="color: white">Edit Arsip Foto</h4>
+                                    <h4 class="modal-title" style="color: white">Edit Arsip Video</h4>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -221,7 +221,7 @@
                 @csrf
                 <div class="modal-content">
                     <div class="modal-header" style="background-color: cornflowerblue">
-                        <h4 class="modal-title" style="color: white">Tambah Arsip Foto</h4>
+                        <h4 class="modal-title" style="color: white">Tambah Arsip Video</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

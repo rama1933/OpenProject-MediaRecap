@@ -107,7 +107,7 @@
                             <input type="hidden" name="id">
                             <div class="modal-content">
                                 <div class="modal-header" style="background-color: cornflowerblue">
-                                    <h4 class="modal-title" style="color: white">Edit Petugas</h4>
+                                    <h4 class="modal-title" style="color: white">Edit Kliping Media</h4>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -154,7 +154,7 @@
                 @csrf
                 <div class="modal-content">
                     <div class="modal-header" style="background-color: cornflowerblue">
-                        <h4 class="modal-title" style="color: white">Tambah Petugas</h4>
+                        <h4 class="modal-title" style="color: white">Tambah Kliping Media</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
