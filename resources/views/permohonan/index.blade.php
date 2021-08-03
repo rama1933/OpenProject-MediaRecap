@@ -95,6 +95,7 @@
                                         <table id="table" class="table table-bordered table-striped responsive">
                                             <thead>
                                                 <tr>
+                                                    <th>No</th>
                                                     <th>Tanggal</th>
                                                     <th>Nama Pemohon</th>
                                                     <th>Nik</th>
@@ -319,6 +320,13 @@
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
     list_data[row.id]=row;
+    return meta.row + meta.settings._iDisplayStart + 1;
+    }
+    },
+    {
+    "targets":1,
+    "class":"text-nowrap",
+    "render":function(data, type, row, meta){
     var bulanIndo = ['', '01', '02', '03', '04', '05', '06', '07', '08', '09' , '10',
     '11', '12'];
     var hari = row.tanggal.split("-")[2];
@@ -328,7 +336,7 @@
     }
     },
     {
-    "targets":1,
+    "targets":2,
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
 
@@ -336,7 +344,7 @@
     }
     },
     {
-    "targets":2,
+    "targets":3,
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
 
@@ -344,7 +352,7 @@
     }
     },
     {
-    "targets":3,
+    "targets":4,
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
 
@@ -352,7 +360,7 @@
     }
     },
     {
-    "targets":4,
+    "targets":5,
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
 
@@ -360,7 +368,7 @@
     }
     },
     {
-    "targets":5,
+    "targets":6,
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
 
@@ -368,7 +376,7 @@
     }
     },
     {
-    "targets":6,
+    "targets":7,
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
 
@@ -376,7 +384,7 @@
     }
     },
     {
-    "targets":7,
+    "targets":8,
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
 
@@ -384,7 +392,7 @@
     }
     },
     {
-    "targets":8,
+    "targets":9,
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
 

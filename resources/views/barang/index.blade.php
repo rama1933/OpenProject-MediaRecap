@@ -78,6 +78,7 @@
                                         <table id="table" class="table table-bordered table-striped responsive">
                                             <thead>
                                                 <tr>
+                                                    <th>No</th>
                                                     <th>ID Barang</th>
                                                     <th>Kategori</th>
                                                     <th>Nama Barang</th>
@@ -264,11 +265,18 @@
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
     list_data[row.id]=row;
-    return row.id_barang;
+    return meta.row + meta.settings._iDisplayStart + 1;
     }
     },
     {
     "targets":1,
+    "class":"text-nowrap",
+    "render":function(data, type, row, meta){
+    return row.id_barang;
+    }
+    },
+    {
+    "targets":2,
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
 
@@ -289,7 +297,7 @@
     }
     },
     {
-    "targets":2,
+    "targets":3,
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
 
@@ -297,7 +305,7 @@
     }
     },
     {
-    "targets":3,
+    "targets":4,
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
 
@@ -305,7 +313,7 @@
     }
     },
     {
-    "targets":4,
+    "targets":5,
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
 

@@ -44,9 +44,7 @@
             <hr class="sidebar-divider">
 
             @if ((auth()->user()->role == 'admin'))
-            <div class="sidebar-heading">
-                Dashboard
-            </div>
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ url('') }}/dashboard">
                     <i class="fas fa-fw fa-fire"></i>
@@ -54,9 +52,7 @@
                 </a>
             </li>
 
-            <div class="sidebar-heading">
-                Data Petugas
-            </div>
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ url('') }}/petugas">
                     <i class="fas fa-fw fa-users"></i>
@@ -64,9 +60,7 @@
                 </a>
             </li>
 
-            <div class="sidebar-heading">
-                Inventaris Barang
-            </div>
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ url('') }}/barang">
                     <i class="fas fa-fw fa-clipboard-list"></i>
@@ -75,9 +69,7 @@
             </li>
 
 
-            <div class="sidebar-heading">
-                Arsip Foto
-            </div>
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ url('') }}/foto">
                     <i class="fas fa-fw fa-photo-video"></i>
@@ -86,9 +78,7 @@
             </li>
 
 
-            <div class="sidebar-heading">
-                Arsip Video
-            </div>
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ url('') }}/video">
                     <i class="fas fa-fw fa-video"></i>
@@ -103,9 +93,7 @@
                 </a>
             </li>
 
-            <div class="sidebar-heading">
-                Kliping Media
-            </div>
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ url('') }}/kliping">
                     <i class="fas fa-fw fa-icons"></i>
@@ -114,9 +102,7 @@
             </li>
 
 
-            <div class="sidebar-heading">
-                Jadwal Peliputan
-            </div>
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ url('') }}/jadwal">
                     <i class="fas fa-fw fa-calendar-alt"></i>
@@ -125,9 +111,7 @@
             </li>
 
 
-            <div class="sidebar-heading">
-                Permohonan Data
-            </div>
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ url('') }}/permohonan">
                     <i class="fas fa-fw fa-file-signature"></i>
@@ -137,11 +121,9 @@
 
 
             <!-- Divider -->
-            <hr class="sidebar-divider">
+            {{--  <hr class="sidebar-divider">  --}}
             <!-- Heading -->
-            <div class="sidebar-heading">
-                Pengaturan
-            </div>
+
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
@@ -164,9 +146,7 @@
 
             <hr class="sidebar-divider">
             <!-- Heading -->
-            <div class="sidebar-heading">
-                Keluar
-            </div>
+
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">

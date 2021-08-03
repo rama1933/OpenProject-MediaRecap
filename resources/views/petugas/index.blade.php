@@ -46,6 +46,7 @@
                                         <table id="table" class="table table-bordered table-striped responsive">
                                             <thead>
                                                 <tr>
+                                                    <th>No</th>
                                                     <th>Foto</th>
                                                     <th>Nama</th>
                                                     <th>Jabatan</th>
@@ -238,16 +239,15 @@
     "targets":0,
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
-        list_data[row.id]=row;
-    return '<img style="width:100px;height:100px;" class="zoom" src="{{ url('') }}/storage/'+row.foto+'">';
+    list_data[row.id]=row;
+    return meta.row + meta.settings._iDisplayStart + 1;
     }
     },
     {
     "targets":1,
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
-
-    return row.nama;
+    return '<img style="width:100px;height:100px;" class="zoom" src="{{ url('') }}/storage/'+row.foto+'">';
     }
     },
     {
@@ -255,7 +255,7 @@
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
 
-    return row.jabatan;
+    return row.nama;
     }
     },
     {
@@ -263,7 +263,7 @@
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
 
-    return row.alamat;
+    return row.jabatan;
     }
     },
     {
@@ -271,11 +271,19 @@
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
 
-    return row.no_hp;
+    return row.alamat;
     }
     },
     {
     "targets":5,
+    "class":"text-nowrap",
+    "render":function(data, type, row, meta){
+
+    return row.no_hp;
+    }
+    },
+    {
+    "targets":6,
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
 
