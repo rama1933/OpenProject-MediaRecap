@@ -53,14 +53,24 @@
     <footer>
         <hr>
     </footer>
-    <div class="row">
+    <div class="row" style="text-align: center">
         <div class="column left">
-            <img src="{{  public_path() }}/login/images/kominfo.png" style="width:50px">
+            <img src="{{  public_path() }}/login/images/hss.png" style="width:50px">
         </div>
         <div class="column right">
-            <h3 style="margin-top: 12px;margin-left: -10px;">E-Arsip DIskominfo</h3>
+            <h5 style="margin-top: -10px">
+                PEMERINTAH KABUPATEN HULU SUNGAI SELATAN
+            </h5>
+            <h3 style="margin-top: -15px">
+                DINAS KOMUNIKASI DAN INFORMATIKA
+            </h3>
+            <h6 style="margin-top: -15px">
+                Jalan Aluh Idut No. 66 A Kandangan Kab. Hulu Sungai Selatan
+                KANDANGAN 71211
+            </h6>
         </div>
     </div>
+    <hr style="margin-top: -15px">
     <table style="width: 100%;margin-top:10px;">
         <thead>
             <tr>
@@ -99,6 +109,21 @@
             @endforelse
         </tbody>
     </table>
+    <div class="row" style="text-align: center;float:right;width: 30%;">
+        <div>
+            <h4>
+                KEPALA DINAS, <br>
+                Hj. RAHMAWATY, ST. MT. <br>
+                Pembina Tingkat I
+            </h4>
+            <br>
+            <br>
+            <br>
+            <h4>
+                NIP. 19710726 199703 2 005
+            </h4>
+        </div>
+    </div>
 </body>
 
 </html>
