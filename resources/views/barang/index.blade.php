@@ -72,6 +72,20 @@
                                                     <input type="text" name="nama_barang" class="form-control">
                                                 </div>
 
+                                                <div class="form-group mr-2">
+                                                    <label class="mr-3" for="">Kondisi</label>
+                                                    <select name="kondisi" class="form-control">
+                                                        <option value="">--Pilih Kondisi--</option>
+                                                        <option value="Bagus">Bagus</option>
+                                                        <option value="Rusak">Rusak</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="form-group mr-2">
+                                                    <label class="mr-3" for="">Pemakai</label>
+                                                    <input type="text" name="pemakai" class="form-control">
+                                                </div>
+
                                                 <button type="submit" class="btn btn-success">Cetak</button>
                                             </form>
                                         </div>
@@ -82,6 +96,8 @@
                                                     <th>ID Barang</th>
                                                     <th>Kategori</th>
                                                     <th>Nama Barang</th>
+                                                    <th>Kondisi</th>
+                                                    <th>Pemakai</th>
                                                     <th>Stok</th>
                                                     <th>Aksi</th>
                                                 </tr>
@@ -140,6 +156,20 @@
                                         </div>
 
                                         <div class="col-md-12">
+                                            <label class="mr-3" for="">Kondisi</label>
+                                            <select name="kondisi" class="form-control" required>
+                                                <option value="">--Pilih--</option>
+                                                <option value="Bagus">Bagus</option>
+                                                <option value="Rusak">Rusak</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <label for="pemakai">Pemakai<small class="text-danger">*</small></label>
+                                            <input type="text" name="pemakai" class="form-control" required>
+                                        </div>
+
+                                        <div class="col-md-12">
                                             <label for="stok">Stok <small class="text-danger">*</small></label>
                                             <input type="text" name="stok" onkeypress="return hanyaAngka(event)"
                                                 id="stok" class="form-control" required>
@@ -195,6 +225,20 @@
                             <div class="col-md-12">
                                 <label for="nama">Nama Barang <small class="text-danger">*</small></label>
                                 <input type="text" name="nama" class="form-control" required>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label class="mr-3" for="">Kondisi</label>
+                                <select name="kondisi" class="form-control" required>
+                                    <option value="">--Pilih--</option>
+                                    <option value="Bagus">Bagus</option>
+                                    <option value="Rusak">Rusak</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label for="pemakai">Pemakai<small class="text-danger">*</small></label>
+                                <input type="text" name="pemakai" class="form-control" required>
                             </div>
 
                             <div class="col-md-12">
@@ -309,11 +353,27 @@
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
 
-    return row.stok;
+    return row.kondisi;
     }
     },
     {
     "targets":5,
+    "class":"text-nowrap",
+    "render":function(data, type, row, meta){
+
+    return row.pemakai;
+    }
+    },
+    {
+    "targets":6,
+    "class":"text-nowrap",
+    "render":function(data, type, row, meta){
+
+    return row.stok;
+    }
+    },
+    {
+    "targets":7,
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
 
@@ -368,6 +428,8 @@
     $("#form-edit [name='id_barang']").val(edit.id_barang)
     $("#form-edit [name='kategori']").val(edit.kategori)
     $("#form-edit [name='nama']").val(edit.nama)
+    $("#form-edit [name='kondisi']").val(edit.kondisi)
+    $("#form-edit [name='pemakai']").val(edit.pemakai)
     $("#form-edit [name='stok']").val(edit.stok)
     }
     $('#form-edit').on('submit', function(e) {

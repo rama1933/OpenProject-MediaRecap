@@ -74,7 +74,7 @@
     <table style="width: 100%;margin-top:10px;">
         <thead>
             <tr>
-                <th colspan="5">
+                <th colspan="7">
                     Data Inventaris Barang
                 </th>
             </tr>
@@ -83,6 +83,8 @@
                 <th>Id Barang</th>
                 <th>kategori</th>
                 <th>Nama barang</th>
+                <th>Kondisi</th>
+                <th>Pemakai</th>
                 <th>Stok</th>
             </tr>
         </thead>
@@ -106,6 +108,8 @@
                     @endif
                 </td>
                 <td style="">{{ $barang->nama }}</td>
+                <td style="">{{ $barang->kondisi }}</td>
+                <td style="">{{ $barang->pemakai }}</td>
                 <td style="">{{ $barang->stok }}</td>
             </tr>
             @empty

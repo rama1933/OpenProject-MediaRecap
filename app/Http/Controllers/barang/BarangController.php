@@ -168,6 +168,13 @@ class BarangController extends Controller
         if ($request->input('nama') != null) {
             $query->where('nama', $request->input('nama'));
         }
+        if ($request->input('kondisi') != null) {
+            $query->where('kondisi', $request->input('kondisi'));
+        }
+        if ($request->input('pemakai') != null) {
+            $query->where('pemakai', $request->input('pemakai'));
+        }
+
 
         $data['barang'] = $query->get();
 

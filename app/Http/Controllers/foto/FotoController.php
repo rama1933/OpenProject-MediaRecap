@@ -124,6 +124,7 @@ class FotoController extends Controller
                 'tanggal' => $tanggal,
                 'judul' => $request->input('judul'),
                 'master_petugas_id' => $request->input('master_petugas_id'),
+                 'kategori' => $request->input('kategori'),
                 "created_at" =>  \Carbon\Carbon::now(), # new \Datetime()
                 "updated_at" => \Carbon\Carbon::now(),  # new \Datetime()
             ]);
@@ -228,6 +229,9 @@ class FotoController extends Controller
         }
         if ($request->input('master_petugas_id') != null) {
             $query->where('master_petugas_id', $request->input('master_petugas_id'));
+        }
+        if ($request->input('kategori') != null) {
+            $query->where('kategori', $request->input('kategori'));
         }
 
         $data['foto'] = $query->get();

@@ -87,6 +87,18 @@
                                                     </select>
                                                 </div>
 
+                                                <div class="form-group mr-2">
+                                                    <label class="mr-3" for="">Kategori</label>
+                                                    <select name="kategori" class="form-control "
+                                                        data-placeholder="Pilih kategori">
+                                                        <option value="">--Pilih Kategori--</option>
+                                                        <option value="1">Berita Harian</option>
+                                                        <option value="2">Berita Lepas</option>
+                                                        <option value="3">Ucapan</option>
+                                                        <option value="4">Iklan</option>
+                                                    </select>
+                                                </div>
+
 
 
                                                 <button type="submit" class="btn btn-success">Cetak</button>
@@ -100,7 +112,7 @@
                                                     <th>Tanggal</th>
                                                     <th>Judul</th>
                                                     <th>Peliput</th>
-
+                                                    <th>Kategori</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
@@ -151,6 +163,18 @@
                                                 @foreach ($petugas2 as $petugas2)
                                                 <option value="{{ $petugas2->id }}">{{ $petugas2->nama }}</option>
                                                 @endforeach
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <label for="kategori">Kategori <small class="text-danger">*</small></label>
+                                            <select name="kategori" class="form-control "
+                                                data-placeholder="Pilih kategori" required>
+                                                <option value="">--Pilih Kategori--</option>
+                                                <option value="1">Berita Harian</option>
+                                                <option value="2">Berita Lepas</option>
+                                                <option value="3">Ucapan</option>
+                                                <option value="4">Iklan</option>
                                             </select>
                                         </div>
 
@@ -224,6 +248,18 @@
                                     @foreach ($petugas as $petugas)
                                     <option value="{{ $petugas->id }}">{{ $petugas->nama }}</option>
                                     @endforeach
+                                </select>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label for="kategori">Kategori <small class="text-danger">*</small></label>
+                                <select name="kategori" class="form-control " data-placeholder="Pilih kategori"
+                                    required>
+                                    <option value="">--Pilih Kategori--</option>
+                                    <option value="1">Berita Harian</option>
+                                    <option value="2">Berita Lepas</option>
+                                    <option value="3">Ucapan</option>
+                                    <option value="4">Iklan</option>
                                 </select>
                             </div>
 
@@ -344,6 +380,27 @@
     "class":"text-nowrap",
     "render":function(data, type, row, meta){
 
+   let tampilan =``;
+    if (row.kategori == 1) {
+    tampilan =`Berita Harian`;
+    }
+    if (row.kategori == 2) {
+    tampilan =`Berita Lepas`;
+    }
+    if (row.kategori == 3) {
+    tampilan =`Peliput`;
+    }
+    if (row.kategori == 4) {
+    tampilan =`Iklan`;
+    }
+    return tampilan;
+    }
+    },
+    {
+    "targets":5,
+    "class":"text-nowrap",
+    "render":function(data, type, row, meta){
+
     // let download = `<a href="{{ url('')}}/user_download/${row.file}" title="Download file"></i></a>`
 
     let tampilan =`<button title="Detail" onclick="show('${row.id}')" class="btn btn-sm btn-success"><i class="fa fa-eye"></i></button>
@@ -400,6 +457,7 @@
     $("#form-edit [name='tanggal']").val(edit.tanggal)
     $("#form-edit [name='judul']").val(edit.judul)
     $("#form-edit [name='master_petugas_id']").val(edit.master_petugas_id)
+    $("#form-edit [name='kategori']").val(edit.kategori)
     }
     $('#form-edit').on('submit', function(e) {
     e.preventDefault()

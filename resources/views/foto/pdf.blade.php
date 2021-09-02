@@ -74,7 +74,7 @@
     <table style="width: 100%;margin-top:10px;">
         <thead>
             <tr>
-                <th colspan="4">
+                <th colspan="5">
                     Data Arsip Foto
                 </th>
             </tr>
@@ -83,6 +83,7 @@
                 <th>Tanggal</th>
                 <th>Judul</th>
                 <th>Peliput</th>
+                <th>Kategori</th>
             </tr>
         </thead>
         <tbody>
@@ -94,6 +95,20 @@
                 @foreach ($foto->petugas as $c)
                 <td>{{ $c->nama }}</td>
                 @endforeach
+                <td style="">
+                    @if ($foto->kategori == 1)
+                    Berita Harian
+                    @endif
+                    @if ($foto->kategori == 2)
+                    Berita Lepas
+                    @endif
+                    @if ($foto->kategori == 3)
+                    Ucapan
+                    @endif
+                    @if ($foto->kategori == 4)
+                    Iklan
+                    @endif
+                </td>
             </tr>
             @empty
             <tr>
